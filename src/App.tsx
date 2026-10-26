@@ -1,6 +1,17 @@
 import { useState } from "react";
 import "./App.css";
 
+const CONTACT_PHONE_1 = "919694517620";
+const DISPLAY_PHONE_1 = "+91 9694517620";
+
+const CONTACT_PHONE_2 = "917425847714";
+const DISPLAY_PHONE_2 = "+91 7425847714";
+
+
+
+
+
+
 const properties = [
 {
 id: 1,
@@ -53,11 +64,36 @@ const filteredProperties = properties.filter((property) =>
 .includes(search.toLowerCase())
 );
 
-return ( <main> <nav className="navbar"> <a className="logo" href="#">
-ESTORA<span>.</span> </a> <div className="nav-links"> <a href="#properties">Properties</a> <a href="#about">About</a> <a className="nav-contact" href="mailto:hello@estora.example">
-Contact Us ↗ </a> </div> </nav>
+return ( <main> <nav className="navbar">
+ <a className="logo" href="#">
+ESTORA<span>.</span> </a> <div className="nav-links">
+ <a href="#properties">Properties</a>
+ <a href="#about">About</a>
 
-```
+<div className="nav-contact-group">
+  <a className="nav-contact" href={`tel:+${CONTACT_PHONE_1}`}>
+    Call 1: {DISPLAY_PHONE_1}
+  </a>
+
+  <a className="nav-contact" href={`tel:+${CONTACT_PHONE_2}`}>
+    Call 2: {DISPLAY_PHONE_2}
+  </a>
+
+  <a
+    className="nav-contact"
+    href={`https://wa.me/${CONTACT_PHONE_1}`}
+    target="_blank"
+    rel="noreferrer"
+  >
+    WhatsApp
+  </a>
+</div>
+
+
+</div>
+</nav>
+
+
   <section className="hero">
     <div className="hero-content">
       <span className="eyebrow">A MORE THOUGHTFUL WAY HOME</span>

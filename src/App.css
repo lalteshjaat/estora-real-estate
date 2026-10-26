@@ -643,3 +643,20 @@ height: 220px;
 padding: 22px;
 }
 }
+.nav-contact-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .nav-contact-group {
+    gap: 5px;
+  }
+
+  .nav-contact-group .nav-contact {
+    font-size: 11px;
+    padding: 8px;
+  }
+}
